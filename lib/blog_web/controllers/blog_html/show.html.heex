@@ -1,4 +1,9 @@
-<.link href={~p"/blog"}>← All posts</.link>
+<.link href={~p"/blog"}>
+  <.button class="flex gap-2 items-center">
+    <Heroicons.Solid.arrow_sm_left class="w-5 h-5" />
+    <span>All posts</span>
+  </.button>
+</.link>
 
 <div class="mx-auto max-w-4xl">
   <h1 class="text-8xl font-sarasvati"><%= @post.title %></h1>

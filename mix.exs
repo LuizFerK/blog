@@ -57,7 +57,8 @@ defmodule Blog.MixProject do
       {:bandit, "~> 1.2"},
       {:nimble_publisher, "~> 0.1.1"},
       {:makeup_elixir, ">= 0.0.0"},
-      {:makeup_erlang, ">= 0.0.0"}
+      {:makeup_erlang, ">= 0.0.0"},
+      {:heroicons_liveview, "~> 0.3.0"}
     ]
   end
 
