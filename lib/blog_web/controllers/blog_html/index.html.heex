@@ -1,25 +1,27 @@
-<h1 class="font-sarasvati text-8xl mt-[300px]">Publications</h1>
+<div class="h-full flex flex-col justify-end py-6">
+  <h1 class="font-sarasvati text-8xl">Publications</h1>
 
-<div class="flex gap-4 mt-4">
-  <%= for post <- @posts do %>
-    <.link
-      href={~p"/blog/#{post.id}"}
-      id="{post.id}"
-      class="bg-slate-50 p-6 w-[250px] h-[400px] rounded-xl flex flex-col justify-end hover:scale-105 transition-all duration-200 cursor-pointer"
-    >
-      <h2 class="font-sarasvati text-6xl">
-        <%= post.title %>
-      </h2>
+  <div class="flex gap-4 mt-4">
+    <%= for post <- @posts do %>
+      <.link
+        href={~p"/blog/#{post.id}"}
+        id="{post.id}"
+        class="bg-slate-50 p-6 w-[250px] h-[400px] rounded-xl flex flex-col justify-end hover:scale-105 transition-all duration-200 cursor-pointer"
+      >
+        <h2 class="font-sarasvati text-6xl">
+          <%= post.title %>
+        </h2>
 
-      <p>
-        <time><%= post.date %></time>
-      </p>
+        <p>
+          <time><%= post.date %></time>
+        </p>
 
-      <%= raw(post.description) %>
+        <%= raw(post.description) %>
 
-      <p>
-        <%= Enum.join(post.tags, ", ") %>
-      </p>
-    </.link>
-  <% end %>
+        <p>
+          <%= Enum.join(post.tags, ", ") %>
+        </p>
+      </.link>
+    <% end %>
+  </div>
 </div>
