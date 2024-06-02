@@ -14,7 +14,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brand: "#FD4F00",
+        background: "#0B032D",
+        primary: "#843B62",
+        secondary: "#F67E7D",
+        tertiary: "#FFB997"
       },
       fontFamily: {
         sarasvati: ["Sarasvati"]

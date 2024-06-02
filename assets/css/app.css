@@ -39,31 +39,51 @@
   position: absolute;
   overflow: hidden;
   top: 0%;
-  bottom: 0%;
+  height: 100vh;
   left: 0%;
   right: 0%;
+  height: 100vh;
+}
+
+.canvas-wrapper .canvas-rotation {
+  -webkit-animation:spin 10s linear infinite;
+  -moz-animation:spin 10s linear infinite;
+  animation:spin 10s linear infinite;
+}
+
+@-moz-keyframes spin { 
+  100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+  100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+  100% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
 }
 
 .canvas-opacity-diagonal {
   position: absolute;
   overflow: hidden;
   top: 0%;
-  bottom: 0%;
+  height: 100vh;
   left: 0%;
   right: 0%;
   z-index: 1;
-  background: linear-gradient(40deg, white, #ffffff00);
+  background: linear-gradient(40deg, theme(colors.background), #ffffff00);
 }
 
 .canvas-opacity-bottom {
   position: absolute;
   overflow: hidden;
   top: 0%;
-  bottom: 0%;
+  height: 100vh;
   left: 0%;
   right: 0%;
   z-index: 1;
-  background: linear-gradient(0deg, white, 70%, #ffffff00);
+  background: linear-gradient(0deg, theme(colors.background), 70%, #ffffff00);
 }
 
 .canvas-wrapper .aurora-wrapper {
@@ -90,22 +110,22 @@
 }
 
 .canvas-wrapper .circle.circle-0 {
-  background: radial-gradient(ellipse, #6689E8, transparent, transparent);
+  background: radial-gradient(ellipse, #F8D082, transparent, transparent);
   animation: moveAround0 4s ease-in-out infinite;
 }
 
 .canvas-wrapper .circle.circle-1 {
-  background: radial-gradient(ellipse, #4BF87B, transparent, transparent);
+  background: radial-gradient(ellipse, #B51B75, transparent, transparent);
   animation: moveAround1 4s ease-in-out infinite;
 }
 
 .canvas-wrapper .circle.circle-2 {
-  background: radial-gradient(ellipse, #D5638A, transparent, transparent);
+  background: radial-gradient(ellipse, #B51B75, transparent, transparent);
   animation: moveAround2 4s ease-in-out infinite;
 }
 
 .canvas-wrapper .circle.circle-3 {
-  background: radial-gradient(ellipse, #817CED, transparent, transparent);
+  background: radial-gradient(ellipse, #640D6B, transparent, transparent);
   animation: moveAround3 4s ease-in-out infinite;
 }
 
