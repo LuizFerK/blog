@@ -2,4 +2,142 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-/* This file is for your main application CSS */
+.appear-from-top {
+  animation: appearFromTop 1s ease-in-out;
+}
+
+@keyframes appearFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.appear-from-bottom {
+  animation: appearFromBottom 1s ease-in-out;
+  animation-delay: var(--i);
+  animation-fill-mode: forwards;
+}
+
+@keyframes appearFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.canvas-wrapper {
+  background-color: #EA78DE;
+  position: absolute;
+  overflow: hidden;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.canvas-wrapper .canvas-opacity {
+  height: 100%;
+  z-index: 20;
+  background: linear-gradient(40deg, white, #ffffff00);
+  position: relative;
+}
+
+.canvas-wrapper .aurora-wrapper {
+  width: 100%;
+  height: 100%;
+  background: rgba(194, 194, 194, 0.131);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.canvas-wrapper .circle {
+  width: 150%;
+  z-index: 10;
+  aspect-ratio: 0.8;
+  margin: 0px auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.canvas-wrapper .circle.circle-0 {
+  background: radial-gradient(ellipse, #6689E8, transparent, transparent);
+  animation: moveAround0 4s ease-in-out infinite;
+}
+
+.canvas-wrapper .circle.circle-1 {
+  background: radial-gradient(ellipse, #4BF87B, transparent, transparent);
+  animation: moveAround1 4s ease-in-out infinite;
+}
+
+.canvas-wrapper .circle.circle-2 {
+  background: radial-gradient(ellipse, #D5638A, transparent, transparent);
+  animation: moveAround2 4s ease-in-out infinite;
+}
+
+.canvas-wrapper .circle.circle-3 {
+  background: radial-gradient(ellipse, #817CED, transparent, transparent);
+  animation: moveAround3 4s ease-in-out infinite;
+}
+
+@keyframes moveAround0 {
+  0% {
+    transform: translate(-40%, -30%);
+  }
+  50% {
+    transform: translate(0%, 20%);
+  }
+  100% {
+    transform: translate(-40%, -30%);
+  }
+}
+
+@keyframes moveAround1 {
+  0% {
+    transform: translate(-70%, -70%);
+  }
+  50% {
+    transform: translate(-40%, -40%);
+  }
+  100% {
+    transform: translate(-70%, -70%);
+  }
+}
+
+@keyframes moveAround2 {
+  0% {
+    transform: translate(30%, -80%);
+  }
+  50% {
+    transform: translate(-30%, -50%);
+  }
+  100% {
+    transform: translate(30%, -80%);
+  }
+}
+
+@keyframes moveAround3 {
+  0% {
+    transform: translate(-25%, 0%);
+  }
+  50% {
+    transform: translate(-76%, -45%);
+  }
+  100% {
+    transform: translate(-25%, 0%);
+  }
+}
