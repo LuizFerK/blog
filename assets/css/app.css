@@ -44,11 +44,26 @@
   right: 0%;
 }
 
-.canvas-wrapper .canvas-opacity {
-  height: 100%;
-  z-index: 20;
+.canvas-opacity-diagonal {
+  position: absolute;
+  overflow: hidden;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  z-index: 1;
   background: linear-gradient(40deg, white, #ffffff00);
-  position: relative;
+}
+
+.canvas-opacity-bottom {
+  position: absolute;
+  overflow: hidden;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  z-index: 1;
+  background: linear-gradient(0deg, white, 70%, #ffffff00);
 }
 
 .canvas-wrapper .aurora-wrapper {

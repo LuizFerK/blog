@@ -1,15 +1,14 @@
-<header class="p-4 fixed w-full z-30 appear-from-top">
+<header class="p-4 pb-0 fixed w-full z-30 appear-from-top backdrop-blur-sm">
   <span class="font-sarasvati text-2xl">LuizFerK</span>
   <hr class="mt-2" />
 </header>
 <div class="canvas-wrapper">
-  <div class="canvas-opacity"></div>
   <div class="circle circle-0"></div>
   <div class="circle circle-1"></div>
   <div class="circle circle-2"></div>
   <div class="circle circle-3"></div>
 </div>
-<main class="px-4 sm:px-6 lg:px-8 h-full pt-[73px] relative z-30">
+<main class="px-4 sm:px-6 lg:px-8 h-full pt-[73px] relative z-10">
   <.flash_group flash={@flash} />
   <%= @inner_content %>
 </main>
