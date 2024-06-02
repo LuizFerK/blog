@@ -42,3 +42,19 @@ liveSocket.connect()
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket
 
+// Dark mode config
+if (localStorage.getItem('@LuizFerK[dark]') === 'dark' || (!('@LuizFerK[dark]' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark')
+} else {
+  document.documentElement.classList.remove('dark')
+}
+
+window.toggleDark = () => {
+  if (document.documentElement.classList.contains('dark')) {
+    localStorage.setItem('@LuizFerK[dark]', 'light')
+    document.documentElement.classList.remove('dark')
+  } else {
+    localStorage.setItem('@LuizFerK[dark]', 'dark')
+    document.documentElement.classList.add('dark')
+  }
+}

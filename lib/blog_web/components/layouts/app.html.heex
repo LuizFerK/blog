@@ -1,6 +1,12 @@
 <header class="p-4 pb-0 fixed w-full z-30 appear-from-top backdrop-blur-sm">
-  <span class="font-sarasvati text-2xl">LuizFerK</span>
-  <hr class="mt-2" />
+  <div class="flex items-center justify-between">
+    <span class="font-sarasvati text-2xl">LuizFerK</span>
+    <button onclick="toggleDark()">
+      <Heroicons.Outline.moon class="w-6 h-6 -mt-2 dark:hidden" />
+      <Heroicons.Outline.sun class="w-6 h-6 -mt-2 hidden dark:block" />
+    </button>
+  </div>
+  <hr class="mt-2 border-slate-300" />
 </header>
 <div class="canvas-wrapper">
   <div class="canvas-rotation">

@@ -11,13 +11,15 @@ module.exports = {
     "../lib/blog_web.ex",
     "../lib/blog_web/**/*.*ex"
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        background: "#0B032D",
-        primary: "#843B62",
-        secondary: "#F67E7D",
-        tertiary: "#FFB997"
+        background: "rgb(var(--color-background) / <alpha-value>)",
+        primary: "rgb(var(--color-primary) / <alpha-value>)",
+        secondary: "rgb(var(--color-secondary) / <alpha-value>)",
+        tertiary: "rgb(var(--color-tertiary) / <alpha-value>)",
+        text: "rgb(var(--color-text) / <alpha-value>)",
       },
       fontFamily: {
         sarasvati: ["Sarasvati"]

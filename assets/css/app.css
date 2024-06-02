@@ -2,6 +2,22 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+:root {
+  --color-background: 238 238 238;
+  --color-primary: 93 56 145;
+  --color-secondary: 209 71 140;
+  --color-tertiary: 249 148 23;
+  --color-text: 0 0 0;
+}
+
+.dark {
+  --color-background: 11 3 45;
+  --color-primary: 132 59 98;
+  --color-secondary: 246 126 125;
+  --color-tertiary: 255 185 151;
+  --color-text: 255 255 255;
+}
+
 .appear-from-top {
   animation: appearFromTop 1s ease-in-out;
 }
@@ -72,7 +88,7 @@
   left: 0%;
   right: 0%;
   z-index: 1;
-  background: linear-gradient(40deg, theme(colors.background), #ffffff00);
+  background: linear-gradient(40deg, rgb(var(--color-background)), #ffffff00);
 }
 
 .canvas-opacity-bottom {
@@ -83,7 +99,7 @@
   left: 0%;
   right: 0%;
   z-index: 1;
-  background: linear-gradient(0deg, theme(colors.background), 70%, #ffffff00);
+  background: linear-gradient(0deg, rgb(var(--color-background)), 70%, #ffffff00);
 }
 
 .canvas-wrapper .aurora-wrapper {
