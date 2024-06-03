@@ -1,13 +1,13 @@
 <div class="canvas-opacity-bottom"></div>
 <div class="z-10 relative pb-10">
   <.link href={~p"/blog"}>
-    <.button class="flex gap-2 items-center mb-4">
+    <.button class="flex gap-2 items-center mb-4 appear-from-top">
       <Heroicons.Solid.arrow_sm_left class="w-5 h-5" />
       <span>All posts</span>
     </.button>
   </.link>
 
-  <div class="mx-auto max-w-4xl">
+  <div id="post-content" class="mx-auto max-w-4xl">
     <%!-- <div class="-mx-3 h-[290px] bg-slate-100 bg-opacity-30 rounded-3xl mb-14 flex items-center justify-center">
       <img
         class="rounded-3xl w-[350px]"
@@ -17,7 +17,7 @@
       />
     </div> --%>
 
-    <div class="-mx-3">
+    <div class="-mx-3 appear-from-bottom-light">
       <img
         class="rounded-3xl w-full mb-14"
         alt="banner"
@@ -25,18 +25,22 @@
       />
     </div>
 
-    <h1 class="text-8xl font-sarasvati"><%= @post.title %></h1>
+    <h1 class="text-8xl font-sarasvati appear-from-bottom">
+      <%= @post.title %>
+    </h1>
 
-    <p>
+    <p class="appear-from-bottom" style="--i: 0.2s">
       <time><%= @post.date %></time> by <%= @post.author %>
     </p>
 
-    <p>
+    <p class="appear-from-bottom" style="--i: 0.4s">
       Tags: <%= Enum.join(@post.tags, ", ") %>
     </p>
 
-    <hr class="mt-4 pb-4" />
+    <hr class="mt-6 pb-6 border-gray-300 mx-1 appear-from-bottom" style="--i: 0.6s" />
 
-    <%= raw(@post.body) %>
+    <div class="appear-from-bottom-light" style="--i: 0.8s">
+      <%= raw(@post.body) %>
+    </div>
   </div>
 </div>

@@ -18,6 +18,20 @@
   --color-text: 255 255 255;
 }
 
+.at-top {
+  color: white;
+  transition: color 2s;
+}
+
+.scroll {
+  color: var(--color-text);
+  transition: color 2s;
+}
+
+.reading * {
+  animation-delay: 0s !important;
+}
+
 .appear-from-top {
   animation: appearFromTop 1s ease-in-out;
 }
@@ -34,7 +48,15 @@
 }
 
 .appear-from-bottom {
+  opacity: 0;
   animation: appearFromBottom 1s ease-in-out;
+  animation-delay: var(--i);
+  animation-fill-mode: forwards;
+}
+
+.appear-from-bottom-light {
+  opacity: 0;
+  animation: appearFromBottomLight 1s ease-in-out;
   animation-delay: var(--i);
   animation-fill-mode: forwards;
 }
@@ -47,6 +69,17 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes appearFromBottomLight {
+  0% {
+    opacity: 0;
+    margin-top: 5px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
   }
 }
 

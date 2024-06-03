@@ -58,3 +58,19 @@ window.toggleDark = () => {
     document.documentElement.classList.add('dark')
   }
 }
+
+function setScrollStyles() {
+  if (window.scrollY >= 480) {
+    document.getElementsByTagName('header')[0].classList.remove('at-top')
+    document.getElementsByTagName('header')[0].classList.add('scroll')
+    document.getElementById('post-content').classList.add('reading')
+  } else {
+    document.getElementsByTagName('header')[0].classList.remove('scroll')
+    document.getElementsByTagName('header')[0].classList.add('at-top')
+    document.getElementById('post-content').classList.remove('reading')
+  }
+}
+
+window.setScrollStyles = setScrollStyles
+
+addEventListener('scroll', setScrollStyles)

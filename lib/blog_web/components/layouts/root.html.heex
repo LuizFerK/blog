@@ -12,7 +12,7 @@
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
     </script>
   </head>
-  <body class="bg-background antialiased overflow-x-hidden text-text">
+  <body onload="setScrollStyles()" class="bg-background antialiased overflow-x-hidden text-text">
     <%= @inner_content %>
   </body>
 </html>
