@@ -1,14 +1,38 @@
 <div class="canvas-opacity-diagonal"></div>
-<div class="z-10 relative flex items-center justify-center h-[900px]">
-  <div class="name">
-    <div class="luiz inline-block">
-      <span class="font-sarasvati text-9xl">Luiz</span>
+<div class="z-10 relative flex flex-col items-center justify-center h-screen -mt-20">
+  <div class="mt-auto flex flex-col items-center">
+    <div class="name">
+      <div class="luiz inline-block">
+        <span class="font-sarasvati text-9xl">Luiz</span>
+      </div>
+      <div class="fer inline-block">
+        <span class="fer font-sarasvati text-9xl">Fernando</span>
+      </div>
+      <div class="klein inline-block">
+        <span class="klein font-sarasvati text-9xl">Klein</span>
+      </div>
     </div>
-    <div class="fer inline-block">
-      <span class="fer font-sarasvati text-9xl">Fernando</span>
+    <div class="flex font-bold">
+      <span class="mr-2"><%= ~c"<" %></span>
+      <div class="h-6 overflow-hidden rounded-lg shadow-2xl">
+        <ul class="vertical-carousel bg-white bg-opacity-15 text-text px-2 text-center flex flex-col items-center justify-center">
+          <li>Elixir</li>
+          <li>Typescript</li>
+          <li>React</li>
+          <li>Vue.js</li>
+          <li aria-hidden="true">Elixir</li>
+        </ul>
+      </div>
+      <span class="ml-2">developer <%= ~c"/>" %></span>
     </div>
-    <div class="klein inline-block">
-      <span class="klein font-sarasvati text-9xl">Klein</span>
-    </div>
+  </div>
+  <div class="mt-auto">
+    <.link
+      href={~p"/blog"}
+      class="-mt-[130px] w-20 h-20 bg-white bg-opacity-15 rounded-3xl flex flex-col items-center justify-center hover:scale-105 hover:shadow-2xl transition-all duration-100"
+    >
+      <Heroicons.Outline.collection class="w-6 h-6 mt-1" />
+      <span>Blog</span>
+    </.link>
   </div>
 </div>
