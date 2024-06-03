@@ -225,3 +225,79 @@
     transform: translate(-25%, 0%);
   }
 }
+
+.luiz {
+  width: 215px;
+  overflow: hidden;
+  animation: luiz 3s ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+  animation-delay: 2s;
+  transition: width 0.6s;
+}
+
+.fer {
+  width: 170px;
+  overflow: hidden;
+  animation: fer 3s ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+  animation-delay: 2s;
+  transition: width 0.6s;
+}
+
+.klein {
+  width: 70px;
+  overflow: hidden;
+  animation: klein 3s ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+  animation-delay: 2s;
+  transition: width 0.6s;
+}
+
+.name:hover :nth-child(1) {
+  width: 240px;
+}
+.name:hover :nth-child(2) {
+  width: 545px;
+}
+.name:hover :nth-child(3) {
+  width: 260px;
+}
+
+@keyframes luiz {
+  0% {
+    width: 215px;
+  }
+  30% {
+    width: 240px;
+  }
+  100% {
+    width: 240px;
+  }
+}
+
+@keyframes fer {
+  0% {
+    width: 170px;
+  }
+  30% {
+    width: 545px;
+  }
+  100% {
+    width: 545px;
+  }
+}
+
+@keyframes klein {
+  0% {
+    width: 70px;
+  }
+  30% {
+    width: 260px;
+  }
+  100% {
+    width: 260px;
+  }
+}

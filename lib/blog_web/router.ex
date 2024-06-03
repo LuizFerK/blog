@@ -17,7 +17,7 @@ defmodule BlogWeb.Router do
   scope "/", BlogWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    get "/", HomeController, :home
 
     get "/blog", BlogController, :index
     get "/blog/:id", BlogController, :show
