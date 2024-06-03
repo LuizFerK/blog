@@ -1,8 +1,8 @@
 <div class="canvas-opacity-diagonal"></div>
-<div class="h-screen -mt-20 -mx-10 px-10 flex flex-col justify-end py-6 z-10 relative overflow-y-hidden">
-  <h1 class="font-sarasvati text-8xl appear-from-bottom">Publications</h1>
+<div class="h-screen -mt-24 flex flex-col justify-end z-10 relative overflow-y-hidden">
+  <h1 class="font-sarasvati text-6xl xm:text-7xl md:text-8xl appear-from-bottom">Publications</h1>
 
-  <div class="flex gap-4 mt-4">
+  <div class="flex gap-4 mt-4 overflow-x-scroll">
     <%= for {post, i} <- Enum.with_index(@posts) do %>
       <div class="appear-from-bottom" style={"--i: #{i * 0.2}s"}>
         <.link

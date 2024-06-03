@@ -302,6 +302,67 @@
   }
 }
 
+
+@media (max-width: theme('screens.xl')) {
+  .luiz {
+    width: 15.5vw;
+  }
+
+  .fer {
+    width: 12vw;
+  }
+
+  .klein {
+    width: 5vw;
+  }
+
+  .name:hover :nth-child(1) {
+    width: 17.2vw;
+  }
+  .name:hover :nth-child(2) {
+    width: 39vw;
+  }
+  .name:hover :nth-child(3) {
+    width: 18.1vw;
+  }
+  
+  @keyframes luiz {
+    0% {
+      width: 15.5vw;
+    }
+    30% {
+      width: 17.2vw;
+    }
+    100% {
+      width: 17.2vw;
+    }
+  }
+  
+  @keyframes fer {
+    0% {
+      width: 12vw;
+    }
+    30% {
+      width: 39vw;
+    }
+    100% {
+      width: 39vw;
+    }
+  }
+  
+  @keyframes klein {
+    0% {
+      width: 5vw;
+    }
+    30% {
+      width: 18.1vw;
+    }
+    100% {
+      width: 18.1vw;
+    }
+  }
+}
+
 .vertical-carousel {
   animation: verticalCarousel 8s infinite;
 }
