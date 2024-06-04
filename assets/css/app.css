@@ -3,7 +3,7 @@
 @import "tailwindcss/utilities";
 
 :root {
-  --color-background: 238 238 238;
+  --color-background: 218 218 218;
   --color-primary: 93 56 145;
   --color-secondary: 209 71 140;
   --color-tertiary: 249 148 23;
@@ -11,7 +11,7 @@
 }
 
 .dark {
-  --color-background: 11 3 45;
+  --color-background: 3 0 28;
   --color-primary: 132 59 98;
   --color-secondary: 246 126 125;
   --color-tertiary: 255 185 151;
@@ -388,4 +388,13 @@
     width: 60px;
     transform: translateY(-96px);
   }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

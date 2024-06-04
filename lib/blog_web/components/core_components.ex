@@ -231,8 +231,8 @@ defmodule BlogWeb.CoreComponents do
     <button
       type={@type}
       class={[
-        "phx-submit-loading:opacity-75 rounded-lg bg-white hover:bg-zinc-100 py-2 px-3",
-        "text-sm font-semibold leading-6 text-black active:text-black/80",
+        "phx-submit-loading:opacity-75 rounded-lg bg-background hover:bg-background/90 py-2 px-3 shadow-2xl",
+        "text-sm font-semibold leading-6 text-text active:text-text/90 hover:scale-105 transition-transform duration-200",
         @class
       ]}
       {@rest}
